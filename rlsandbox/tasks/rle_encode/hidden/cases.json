@@ -1,0 +1,74 @@
+[
+ {
+  "args": [
+   "a"
+  ],
+  "expected": "1a"
+ },
+ {
+  "args": [
+   "abc"
+  ],
+  "expected": "1a1b1c"
+ },
+ {
+  "args": [
+   "zzzzzzzzzzzz"
+  ],
+  "expected": "12z"
+ },
+ {
+  "args": [
+   "aabbaa"
+  ],
+  "expected": "2a2b2a"
+ },
+ {
+  "args": [
+   "cccccccccccccxxxxxaaaaaaaaaaacccccccccccc"
+  ],
+  "expected": "13c5x11a12c"
+ },
+ {
+  "args": [
+   "aaaaaaaaaaaxbbbbbbb"
+  ],
+  "expected": "11a1x7b"
+ },
+ {
+  "args": [
+   "zzzzzzzzzzzzzx"
+  ],
+  "expected": "13z1x"
+ },
+ {
+  "args": [
+   "cccczzzzzzzzzzzzzaaaaaaaaa"
+  ],
+  "expected": "4c13z9a"
+ },
+ {
+  "args": [
+   "aaaaaaaaccccccccccccccabbbbbbbaaaaaaaa"
+  ],
+  "expected": "8a14c1a7b8a"
+ },
+ {
+  "args": [
+   "yyyyyxxxxxxxxxxyyyyyyyyyyyybbyyyy"
+  ],
+  "expected": "5y10x12y2b4y"
+ },
+ {
+  "args": [
+   ""
+  ],
+  "expected": ""
+ },
+ {
+  "args": [
+   "yyyyyyyyyxxxxxxxzzzzzzzzzzzzaaaaaaaacccccccccc"
+  ],
+  "expected": "9y7x12z8a10c"
+ }
+]

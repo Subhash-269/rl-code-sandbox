@@ -1,0 +1,80 @@
+[
+ {
+  "args": [
+   ")("
+  ],
+  "expected": false
+ },
+ {
+  "args": [
+   "((("
+  ],
+  "expected": false
+ },
+ {
+  "args": [
+   "{[()()]}"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "a(b]c"
+  ],
+  "expected": false
+ },
+ {
+  "args": [
+   "no brackets"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "{(a)a}a"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "{}[]"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "{{a}a}{}x1"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "(([[]x1])x1)[({x1}a)]"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "x1"
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   ""
+  ],
+  "expected": true
+ },
+ {
+  "args": [
+   "("
+  ],
+  "expected": false
+ },
+ {
+  "args": [
+   "x}"
+  ],
+  "expected": false
+ }
+]

@@ -1,0 +1,10 @@
+{
+  "id": "balanced_brackets",
+  "function": "is_balanced",
+  "prompt": "Return True if every bracket in the string is closed by the matching bracket type in the correct order, otherwise False. The bracket pairs are (), [] and {}. Every other character is ignored. The empty string is balanced.",
+  "public_examples": [
+    {"args": ["([]{})"], "expected": true},
+    {"args": ["(]"], "expected": false}
+  ],
+  "timeout_s": 20
+}

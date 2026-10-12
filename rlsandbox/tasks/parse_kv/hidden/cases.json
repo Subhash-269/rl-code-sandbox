@@ -1,0 +1,98 @@
+[
+ {
+  "args": [
+   "a=1\na=2"
+  ],
+  "expected": {
+   "a": "2"
+  }
+ },
+ {
+  "args": [
+   "  key  =  value with spaces  "
+  ],
+  "expected": {
+   "key": "value with spaces"
+  }
+ },
+ {
+  "args": [
+   "url=http://x?a=b"
+  ],
+  "expected": {
+   "url": "http://x?a=b"
+  }
+ },
+ {
+  "args": [
+   "=nokey\njust text\n#x=1"
+  ],
+  "expected": {}
+ },
+ {
+  "args": [
+   " user = 1\nport=\n# host=ignored\n# path=ignored\n  mode  =  \nuser=/tmp"
+  ],
+  "expected": {
+   "user": "/tmp",
+   "port": "",
+   "mode": ""
+  }
+ },
+ {
+  "args": [
+   "# port=ignored\n\n"
+  ],
+  "expected": {}
+ },
+ {
+  "args": [
+   "  user  =  1"
+  ],
+  "expected": {
+   "user": "1"
+  }
+ },
+ {
+  "args": [
+   " = orphan value\n# x=ignored"
+  ],
+  "expected": {}
+ },
+ {
+  "args": [
+   " path = on\n = orphan value\nmode=\n  host  =  hello world\nno equals here"
+  ],
+  "expected": {
+   "path": "on",
+   "mode": "",
+   "host": "hello world"
+  }
+ },
+ {
+  "args": [
+   " = orphan value\n   \n  mode  =  \n\n user = on\n# user=ignored\n   "
+  ],
+  "expected": {
+   "mode": "",
+   "user": "on"
+  }
+ },
+ {
+  "args": [
+   "   \nno equals here\n = orphan value\n  x  =  a=b\n = orphan value"
+  ],
+  "expected": {
+   "x": "a=b"
+  }
+ },
+ {
+  "args": [
+   "\n# port=ignored\n = orphan value\n  user  =  a=b\npath=/tmp"
+  ],
+  "expected": {
+   "user": "a=b",
+   "path": "/tmp"
+  }
+ }
+]

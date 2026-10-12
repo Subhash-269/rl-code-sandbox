@@ -1,0 +1,9 @@
+{
+  "id": "lru_cache_ops",
+  "function": "lru_cache_ops",
+  "prompt": "Simulate a least-recently-used cache with the given capacity (at least 1). ops is a list of operations: [\"put\", key, value] stores value under key, and [\"get\", key] reads it. Both a put and a successful get mark the key as most recently used. When a put adds a new key and the cache is full, evict the least recently used key first. Return a list with the result of every get in order, using -1 for a missing key.",
+  "public_examples": [
+    {"args": [2, [["put", "a", 1], ["put", "b", 2], ["get", "a"], ["put", "c", 3], ["get", "b"], ["get", "c"]]], "expected": [1, -1, 3]}
+  ],
+  "timeout_s": 20
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rlsandbox"
+version = "0.1.0"
+description = "A small verifiable coding environment: hidden tests, sandboxed grading, integrity checks."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pytest>=8"]
+
+[project.optional-dependencies]
+llm = ["anthropic", "google-genai"]
+
+[project.scripts]
+rlsandbox-episode = "rlsandbox.run_episode:main"
+
+[tool.setuptools.packages.find]
+include = ["rlsandbox*"]
+
+[tool.setuptools.package-data]
+rlsandbox = ["tasks/*/*.json", "tasks/*/*.py", "tasks/*/hidden/*.json", "docker/Dockerfile"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

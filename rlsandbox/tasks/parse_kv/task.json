@@ -1,0 +1,10 @@
+{
+  "id": "parse_kv",
+  "function": "parse_kv",
+  "prompt": "Parse configuration text made of lines into a dict of strings. For each line: strip surrounding whitespace; skip it if it is empty or starts with '#'; skip it if it has no '='. Otherwise split on the first '=' only, strip whitespace from the key and the value, and skip the line if the key is empty. If a key appears more than once, the last value wins. Lines are separated by '\\n'.",
+  "public_examples": [
+    {"args": ["host = example.org\n# comment\nport=8080"], "expected": {"host": "example.org", "port": "8080"}},
+    {"args": [""], "expected": {}}
+  ],
+  "timeout_s": 20
+}

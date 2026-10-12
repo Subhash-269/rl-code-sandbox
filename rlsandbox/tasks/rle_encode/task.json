@@ -1,0 +1,10 @@
+{
+  "id": "rle_encode",
+  "function": "rle_encode",
+  "prompt": "Run-length encode a string. Each maximal run of the same character becomes the run length followed by the character. Runs longer than 9 are written with their full decimal length (for example 12 copies of 'x' become '12x'). The empty string encodes to the empty string.",
+  "public_examples": [
+    {"args": ["aaabcc"], "expected": "3a1b2c"},
+    {"args": [""], "expected": ""}
+  ],
+  "timeout_s": 20
+}
